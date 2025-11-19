@@ -14,9 +14,9 @@
             tabButtons.forEach((tabButton, index) => {
               tabButton.addEventListener("click", function () {
                 tabContent.style.overflow = "auto";
-                tabCards[index].scrollIntoView({
-                  behavior: "smooth",
-                  block: "nearest",
+                tabContent.scrollTo({
+                    left: tabCards[index].offsetLeft,
+                    behavior: 'smooth'
                 });
                 tabContent.style.overflow = "hidden";
               });
