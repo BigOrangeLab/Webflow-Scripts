@@ -12,7 +12,7 @@
                         tabButtons[0].classList.add('active');
                         tabButtons.forEach((tabButton, index) => {
                             tabButton.addEventListener("click", function () {
-                                tabButtons.querySelector('.active').classList.remove('active');
+                                tabNav.querySelector('.active').classList.remove('active');
                                 tabButton.classList.add('active');
                                 tabContent.style.overflow = "auto";
                                 tabContent.scrollTo({
