@@ -18,6 +18,7 @@
                   behavior: "smooth",
                   block: "nearest",
                 });
+                tabContent.style.overflow = "hidden";
               });
             });
           }
