@@ -36,7 +36,7 @@
     if (infiScrollers.length > 0){
         infiScrollers.forEach(
             (scroller, index) => {
-                let tiles = scroller.children;
+                let tiles = [...scroller.children];
                 if (tiles.length > 0) {
                     tiles.forEach(
                         (tile, index) => {
