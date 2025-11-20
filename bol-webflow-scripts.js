@@ -31,6 +31,26 @@
     }
     //end tabs component
 
+    //start infinite scrollers
+    let infiScrollers = document.querySelectorAll('.scroll_items');
+    if (infiScrollers.length > 0){
+        infiScrollers.forEach(
+            (scroller, index) => {
+                let tiles = scroller.children;
+                if (tiles.length > 0) {
+                    tiles.forEach(
+                        (tile, index) => {
+                            let dup = tile.cloneNode(true);
+                            scroller.appendChild(dup);
+                        }
+                    );
+                }
+                scroller.classList.add('scrolling');
+            }
+        );
+    }
+    //end infinite scrollers
+
     //start video player
     const intentVideos = document.querySelectorAll("iframe[bol-intent-src]");
     const videoObserver = new IntersectionObserver(
